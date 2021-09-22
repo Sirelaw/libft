@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 19:12:19 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/15 23:05:05 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/17 17:25:17 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *dest, int b, size_t c)
 		ptr[i] = b;
 		i++;
 	}
-	return (0);
+	return (dest);
 }

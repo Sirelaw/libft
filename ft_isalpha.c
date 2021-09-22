@@ -6,16 +6,16 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 15:15:41 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 19:44:44 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 18:46:24 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
-	if (c < 65 || c > 122)
-		return (0);
-	else
+	if ((c > 64 && c < 91) || (c > 96 && c < 123))
 		return (1);
+	else
+		return (0);
 }

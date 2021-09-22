@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 11:22:03 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/13 15:02:30 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 21:38:39 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
-	t_list *p;
-	
+	t_list	*p;
+	int		i;
+
 	p = lst;
 	i = 0;
 	while (p != NULL)
 	{
-		i++;
 		p = p->next;
+		i++;
 	}
 	return (i);
 }

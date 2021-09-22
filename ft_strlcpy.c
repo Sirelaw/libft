@@ -6,17 +6,19 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 19:21:42 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/14 22:04:08 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/18 19:29:41 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
+	if (dstsize == 0)
+		return (ft_strlen(src));
 	while (i <= dstsize - 1)
 	{
 		if (i == dstsize - 1)
@@ -27,5 +29,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			break ;
 		i++;
 	}
-	return (i);
+	return (ft_strlen(src));
 }

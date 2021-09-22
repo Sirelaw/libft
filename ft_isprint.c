@@ -6,15 +6,15 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:45:11 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 19:45:00 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 18:46:48 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
-	if (c < 32 || c > 127)
+	if (c < 32 || c > 126)
 		return (0);
 	else
 		return (1);

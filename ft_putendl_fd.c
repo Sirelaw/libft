@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 18:34:33 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 18:11:23 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/22 12:54:21 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (s == NULL)
+		return ;
 	i = 0;
 	while (s[i])
 	{

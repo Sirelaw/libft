@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 16:23:53 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/15 23:05:52 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/20 16:06:26 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *source, size_t n)
 	unsigned char		*ptrd;
 	const unsigned char	*ptrs;
 
+	if ((dest == NULL) && (source == NULL))
+		return (NULL);
 	i = 0;
 	ptrd = dest;
 	ptrs = source;
@@ -26,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *source, size_t n)
 		ptrd[i] = ptrs[i];
 		i++;
 	}
-	return (0);
+	return (dest);
 }

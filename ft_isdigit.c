@@ -6,11 +6,11 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 16:55:48 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/12 21:24:14 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 18:46:41 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char a)
+int	ft_isdigit(int a)
 {
 	if (a < 48 || a > 57)
 		return (0);

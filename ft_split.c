@@ -6,19 +6,21 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 15:31:29 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 21:01:37 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/20 12:02:21 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	free_mallocstr(char **arr, int k)
+static int	free_mallocstr(char **arr, int k)
 {
 	while (k >= 1)
 	{
 		free(arr[k - 1]);
 		k--;
 	}
+	free(arr);
+	return (0);
 }
 
 static char	*ft_mallocstr(char *ptr, char delim)
@@ -65,20 +67,20 @@ static char	**write_to_arr(char const *str, char **arr, char c)
 	return (arr);
 }
 
-static int	get_delimitercount(char const *str, char c)
+static int	get_wordcount(char const *str, char c)
 {
 	int	delimitercount;
 	int	i;
 	int	flag;
 
 	i = 0;
-	flag = 0;
+	flag = 1;
 	delimitercount = 0;
 	while (str[i])
 	{
-		if (str[i] != c)
+		if (str[i] == c)
 			flag = 1;
-		if ((str[i] == c) && (flag == 1))
+		if ((str[i] != c) && (flag == 1))
 		{
 			delimitercount++;
 			flag = 0;
@@ -90,14 +92,16 @@ static int	get_delimitercount(char const *str, char c)
 
 char	**ft_split(char const *str, char c)
 {
-	int										delimitercount;
-	char									**arr;
+	int		wordcount;
+	char	**arr;
 
-	delimitercount = get_delimitercount(str, c);
-	arr = malloc((delimitercount + 2) * sizeof(char *));
+	if (str == NULL)
+		return (NULL);
+	wordcount = get_wordcount(str, c);
+	arr = malloc((wordcount + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
-	arr[delimitercount + 2] = NULL;
+	arr[wordcount] = NULL;
 	arr = write_to_arr(str, arr, c);
 	if (arr == NULL)
 		return (NULL);

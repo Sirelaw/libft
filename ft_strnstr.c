@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:15:50 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 17:54:54 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/18 23:09:52 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (needle[j] == '\0')
+	if (needle[0] == '\0')
 		return ((char *) haystack);
-	while ((needle[j] != '\0') && (i < n))
+	while ((haystack[i] != '\0') && (i < n))
 	{
-		if ((haystack[i] != needle[j]) && (i < n))
+		j = 0;
+		while ((haystack[i + j] == needle[j]) && ((i + j) < n))
 		{
-			i++;
-			j = 0;
-		}
-		while ((haystack[i] == needle[j]) && (i < n))
-		{
-			i++;
+			if (needle[j + 1] == '\0')
+				return ((char *) &haystack[i]);
 			j++;
 		}
+		i++;
 	}
-	if ((needle[j] == '\0') && (haystack[i - 1] == needle[j - 1]))
-		return ((char *) &haystack[i - j]);
-	else
-		return (NULL);
+	return (NULL);
 }

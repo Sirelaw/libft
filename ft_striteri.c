@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 19:51:09 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/15 16:00:08 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/22 12:50:23 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	int	i;
 	int	strlen;
 
+	if (s == NULL)
+		return ;
 	i = 0;
 	strlen = ft_strlen(s);
 	while (i < strlen)

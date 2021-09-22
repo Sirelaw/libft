@@ -6,15 +6,15 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 17:31:16 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 19:44:36 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 18:46:18 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
-	if ((c > 64 && c < 123) || (c > 47 && c < 58))
+	if ((c > 64 && c < 91) || (c > 96 && c < 123) || (c > 47 && c < 58))
 		return (1);
 	else
 		return (0);

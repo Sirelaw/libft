@@ -6,15 +6,15 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 18:15:43 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/13 19:54:59 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/18 15:19:00 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len])

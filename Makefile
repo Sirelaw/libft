@@ -6,7 +6,7 @@
 #    By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 19:02:48 by oipadeol          #+#    #+#              #
-#    Updated: 2021/09/16 22:10:50 by oipadeol         ###   ########.fr        #
+#    Updated: 2021/09/21 16:34:04 by oipadeol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,39 +26,28 @@ BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
 		ft_lstmap.c
 
-
 FLAGS = -Wall -Wextra -Werror
-
 
 all: $(NAME)
 
-$(NAME):
-	gcc $(FLAGS) $(SRC)
-	
-exec:
-	gcc -l -o libft.a *.o
+$(NAME): lib
 
-bonus:
-	gcc $(FLAGS) -o $(NAME) $(BONUS)
-	
+bonus: objects bonusobjects
+	ar -cr $(NAME) *.o
+
+bonusobjects:
+	gcc -c $(FLAGS) $(BONUS)
+
+objects:
+	gcc -c $(FLAGS) $(SRC)
+
 clean:
 	rm -f *.o
-	
-lib: all
-	ar cr libft.a *.o
+
+lib: objects
+	ar -cr $(NAME) *.o
 
 fclean: clean
 	rm -f $(NAME)
 	
 re: fclean all
-
-
-
-
-# I need to make a makefile.
-# First I need to call gcc whenever I want to compile  a source file.
-# Variables are always in allCAPS
-# TEXT = "42 is for the braves"
-
-# rule_a:
-# 	echo $(TEXT)

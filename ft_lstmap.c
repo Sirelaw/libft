@@ -6,29 +6,37 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 11:18:28 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 17:45:53 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 17:55:50 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))
 {
-	t_list	*newlist;
-	t_list	*temp;
-	t_list	*temp;
-	int		len;
+	t_list	*newlisthead;
+	t_list	*newelem;
+	t_list	*p;
 
-	len = 0;
-	temp = lst;
-
-	while (temp != NULL)
-	{
-		temp = temp->next;
-		len++;
-	}
-	newlist = malloc((len + 1) * sizeof(t_list));
-	if (newlist == NULL)
+	if (lst == NULL)
 		return (NULL);
-	temp = len;
+	p = lst;
+	newlisthead = ft_lstnew(f(p->content));
+	if (newlisthead == NULL)
+		return (NULL);
+	newelem = newlisthead;
+	p = p->next;
+	while (p != NULL)
+	{
+		newelem->next = ft_lstnew(f(p->content));
+		p = p->next;
+		newelem = newelem->next;
+		if (newelem == NULL)
+		{
+			ft_lstclear(&newlisthead, del);
+			return (NULL);
+		}
+	}
+	newelem = NULL;
+	return (newlisthead);
 }

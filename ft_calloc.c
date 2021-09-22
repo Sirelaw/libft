@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:25:07 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/15 23:03:39 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/17 17:26:51 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		*ptr;
-	size_t	i;
+	char		*ptr;
+	size_t		i;
 
 	i = 0;
 	ptr = malloc(count * size);

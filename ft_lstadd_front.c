@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 11:17:54 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/16 17:41:39 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:44:39 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new -> next = lst;
-	**lst = *new;	
+	new->next = *lst;
+	*lst = new;
 }
