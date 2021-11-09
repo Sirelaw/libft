@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 22:10:30 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/09/21 18:44:21 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/11/09 21:36:18 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,5 +130,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 // element. Creates a newlist resulting of the successive applications of the
 // func ’f’.  The ’del’ function is used to delete the content of an element.
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
+// Returns the content of the nth element of list 'lst' as a (void *).
+// First element is element 0. 
+void	*ft_lstelem(t_list *lst, int n);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/13 19:02:48 by oipadeol          #+#    #+#              #
-#    Updated: 2021/09/21 16:34:04 by oipadeol         ###   ########.fr        #
+#    Updated: 2021/11/09 21:33:15 by oipadeol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC = 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalpha.c ft_isalnum.c ft_isascii.c\
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c\
 		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
-		ft_lstmap.c
+		ft_lstmap.c ft_lstelem.c
 
 FLAGS = -Wall -Wextra -Werror
 
