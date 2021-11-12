@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 22:10:30 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/11/09 21:36:18 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/11/12 13:14:08 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,9 @@ size_t	ft_strlen(const char *s);
 // Applies the function ’f’ to each character of thestring ’s’ to create a new
 // string (with malloc(3))resulting from successive applications of ’f’.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+// Lexicographically compare two strings s1 and s2.
+// Atleast one of them must be null-terminated else behaviour is undefined.
+int		ft_strcmp(const char *string1, const char *string2);
 // Lexicographically compare the null-terminated strings s1 and s2.
 // Function compares not more than n characters.
 int		ft_strncmp(const char *string1, const char *string2, size_t n);
