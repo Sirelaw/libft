@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 13:09:01 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/11/12 13:09:19 by oipadeol         ###   ########.fr       */
+/*   Updated: 2021/11/12 22:54:53 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_strcmp(const char *string1, const char *string2)
 	if ((str1[i] == str2[i]) && (str1[i] == '\0'))
 		return (0);
 	else
-		return ((int) str1[i] - (int) str2[i]);
+		return ((unsigned int) str1[i] - (unsigned int) str2[i]);
 }
