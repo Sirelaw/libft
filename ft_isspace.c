@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/04 19:48:00 by oipadeol          #+#    #+#             */
-/*   Updated: 2022/04/01 14:54:32 by oipadeol         ###   ########.fr       */
+/*   Created: 2022/04/05 16:36:48 by oipadeol          #+#    #+#             */
+/*   Updated: 2022/04/05 16:40:33 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const char *string1, const char *string2, size_t n)
+int	ft_isspace(char c)
 {
-	size_t			i;
-	unsigned char	*str1;
-	unsigned char	*str2;
-
-	str1 = (unsigned char *)string1;
-	str2 = (unsigned char *)string2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((str1[i] == str2[i]) && (i < (n - 1)))
-		i++;
-	if (str1[i] == str2[i])
-		return (0);
+	if (ft_strchr(" \n\t\v\f\r", c))
+		return (1);
 	else
-		return (str1[i] - str2[i]);
+		return (0);
 }

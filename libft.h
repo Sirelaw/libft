@@ -6,7 +6,7 @@
 /*   By: oipadeol <oipadeol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 22:10:30 by oipadeol          #+#    #+#             */
-/*   Updated: 2021/11/12 13:14:08 by oipadeol         ###   ########.fr       */
+/*   Updated: 2022/04/05 16:41:35 by oipadeol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int a);
 int		ft_isprint(int c);
+int		ft_isspace(char c);
 // Allocates (with malloc(3)) and returns a string representing the integer
 // received as an argument.Negative numbers are handled.
 char	*ft_itoa(int n);
